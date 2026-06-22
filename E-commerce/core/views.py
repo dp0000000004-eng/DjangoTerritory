@@ -8,7 +8,7 @@ def item_list(request):
     context = {
         'items': Item.objects.all()
     }
-    return render(request, 'home_page.html', context)
+    return render(request, 'home_page.html', {"context":context})
 
 
 class HomeView(ListView):
