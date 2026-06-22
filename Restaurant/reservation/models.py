@@ -14,7 +14,7 @@ class Reservation(models.Model):
         verbose_name_plural = "رزروها"
 
     def __str__(self):
-        return self.name
+        return f"{self.name} {self.email}"
 
 
         
