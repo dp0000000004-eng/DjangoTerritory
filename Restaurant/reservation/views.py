@@ -4,7 +4,6 @@ from .form import ReservationForm
 
 
 def reserve(request):
-    reserve_form = ReservationForm()
     if request.method == "POST":
         reserve_form = ReservationForm(request.POST)
     if reserve_form.is_valid():
@@ -15,7 +14,7 @@ def reserve(request):
 
 
     context = {
-        'form':reserve_form
+        'form':ReservationForm(request.POST)
 
 }
     return render(request,'reservation/templates/reservation.html',context)
