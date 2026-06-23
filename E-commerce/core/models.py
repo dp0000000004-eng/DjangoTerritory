@@ -26,7 +26,8 @@ class Item(models.Model):
     label = models.CharField(choices=LABEL_CHOICES, max_length=2)
 
     def __str__(self):
-        return self.title
+        return self.title, self.price
+        
 
 
 class OrderItem(models.Model):
